@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ukkie Trader - Trade like a prudent orangutan. An advanced, regime-aware crypto trading bot for long-term profit.">
+    <title>Ukkie Trader | Prudent Crypto Trading</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+
+    <header class="glass-header">
+        <nav>
+            <div class="logo">
+                <span class="logo-emoji">🦧</span> Ukkie<span class="highlight">Trader</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#philosophy" class="btn-nav"><span lang="ko">철학</span><span lang="en">Philosophy</span></a>
+                </li>
+                <li><a href="#pipeline" class="btn-nav"><span lang="ko">파이프라인</span><span lang="en">Pipeline</span></a>
+                </li>
+                <li><a href="#roadmap" class="btn-nav"><span lang="ko">로드맵</span><span lang="en">Roadmap</span></a></li>
+                <li class="lang-toggle">
+                    <button class="lang-btn active" onclick="setLang('ko')">KO</button>
+                    <button class="lang-btn" onclick="setLang('en')">EN</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span lang="ko">신중한 <span class="gradient-text">오랑우탄</span>처럼 투자하라</span>
+                    <span lang="en">Trade Like a <span class="gradient-text">Prudent Orangutan</span></span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span lang="ko">바나나 냄새 나면 들고 간다. 냄새 없으면 던진다. 우끼우끼. <br> 퀀트의 핵심은 수학이 아니라 규칙입니다.</span>
+                    <span lang="en">Smell banana, hold. No smell, drop. Oook-oook. <br> Quant is about rules, not just
+                        complex math.</span>
+                </p>
+                <div class="cta-group">
+                    <a href="#" class="btn-primary btn-lg">
+                        <span lang="ko">CLI 시작하기</span>
+                        <span lang="en">Get Started with CLI</span>
+                    </a>
+                    <a href="#" class="btn-secondary btn-lg">
+                        <span lang="ko">우끼의 투자원칙</span>
+                        <span lang="en">Ukkie's Principles</span>
+                    </a>
+                </div>
+                <div class="terminal-preview">
+                    <div class="terminal-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="title">ukkie-trader — -zsh — 80x24</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="prompt"><span class="user">ukkie></span> check-regime</p>
+                        <p class="output-line"><span lang="ko">시장 분석: [바나나 냄새 감지!]</span><span lang="en">Market: [Banana
+                                Scent Detected!]</span></p>
+                        <p class="output-line">Regime: <span class="green">TREND_NORMAL</span></p>
+                        <p class="output-line"><span lang="ko">전략 상태: [진입 대기 중]</span><span lang="en">Strategy: [Ready
+                                for Entry]</span></p>
+                        <br>
+                        <p class="prompt"><span class="user">ukkie></span> <span class="cursor">█</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-container">
+                    <img src="../assets/images/ukkie_hero.png" alt="Ukkie Hero" class="main-hero-img">
+                </div>
+                <div class="glowing-orb"></div>
+                <div class="card float-card card-1">
+                    <span class="icon">🍌</span>
+                    <h4><span lang="ko">바나나 냄새?</span><span lang="en">Banana Scent?</span></h4>
+                </div>
+                <div class="card float-card card-2">
+                    <span class="icon">🌴</span>
+                    <h4><span lang="ko">신중한 진입</span><span lang="en">Prudent Entry</span></h4>
+                </div>
+            </div>
+        </section>
+
+        <section id="philosophy" class="philosophy">
+            <div class="container">
+                <div class="side-by-side">
+                    <div class="side-content">
+                        <div class="section-badge">
+                            <span lang="ko">지혜로운 체크리스트</span>
+                            <span lang="en">Ukkie's Checklist</span>
+                        </div>
+                        <h2>
+                            <span lang="ko">오랑우탄 <span class="highlight">전략 검증법</span></span>
+                            <span lang="en">Orangutan <span class="highlight">Validation</span></span>
+                        </h2>
+                        <div class="philosophy-stack">
+                            <div class="philosophy-item-compact">
+                                <span class="phil-num-inline">A</span>
+                                <div>
+                                    <h4><span lang="ko">진짜 바나나인가? (Edge)</span><span lang="en">Is it a Real Banana?
+                                            (Edge)</span></h4>
+                                    <p><span lang="ko">"겉보기에 노란 돌맹이는 바나나가 아니다. 수수료, 슬리피지 다 빼고 배가 불러야 진짜다."</span><span
+                                            lang="en">"A yellow stone looks like a banana but it's not. It must fill
+                                            your belly after fees and slippage."</span></p>
+                                </div>
+                            </div>
+                            <div class="philosophy-item-compact">
+                                <span class="phil-num-inline">B</span>
+                                <div>
+                                    <h4><span lang="ko">생존이 먼저다 (Risk)</span><span lang="en">Survival First
+                                            (Risk)</span></h4>
+                                    <p><span lang="ko">"한 방에 죽으면 나쁜 전략. 얼마나 오래 굶을 수 있는지(MDD) 먼저 봐라. 죽은 원숭이는 말이
+                                            없다."</span><span lang="en">"A strategy that kills you in one shot is bad.
+                                            Check how long you can starve (MDD). Dead monkeys can't trade."</span></p>
+                                </div>
+                            </div>
+                            <div class="philosophy-item-compact">
+                                <span class="phil-num-inline">C</span>
+                                <div>
+                                    <h4><span lang="ko">손이 닿아야 먹는다 (Execution)</span><span lang="en">Reach to Eat
+                                            (Execution)</span></h4>
+                                    <p><span lang="ko">"아무리 맛있는 바나나도 손 안 닿으면 그림의 떡. 체결 안 되는 신호는 그냥 상상일 뿐이다."</span><span
+                                            lang="en">"A banana out of reach is useless. Signals that don't get filled
+                                            are just pure imagination."</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side-visual">
+                        <div class="section-image-box">
+                            <img src="../assets/images/ukkie_survival.png" alt="Survival First">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pipeline" class="pipeline">
+            <div class="container">
+                <div class="section-badge">
+                    <span lang="ko">바나나 냄새 나는 규칙</span>
+                    <span lang="en">Banana Scent Rules</span>
+                </div>
+                <h2>
+                    <span lang="ko">전략의 뼈대 <span class="highlight">딱 4개</span></span>
+                    <span lang="en">The <span class="highlight">4 Pillars</span> of Rule</span>
+                </h2>
+
+                <div class="orbit-container">
+                    <div class="orbit-center">
+                        <img src="../assets/images/ukkie_pillars.png" alt="4 Pillars">
+                    </div>
+                    <div class="orbit-grid">
+                        <div class="compact-pillar">
+                            <h4><span lang="ko">신호 진입 (Entry)</span><span lang="en">Entry Signal</span></h4>
+                            <p><span lang="ko">언제 나무에 올라갈지 결정하는 냄새.</span><span lang="en">The scent that tells you when
+                                    to climb the tree.</span></p>
+                        </div>
+                        <div class="compact-pillar">
+                            <h4><span lang="ko">수익 청산 (Exit)</span><span lang="en">Exit Logic</span></h4>
+                            <p><span lang="ko">바나나를 따고 언제 내려올지 결정.</span><span lang="en">Deciding when to get down after
+                                    picking the banana.</span></p>
+                        </div>
+                        <div class="compact-pillar">
+                            <h4><span lang="ko">사이징 (Size)</span><span lang="en">Position Sizing</span></h4>
+                            <p><span lang="ko">얼마나 많은 바나나를 한 번에 담을지.</span><span lang="en">How many bananas to carry at
+                                    once.</span></p>
+                        </div>
+                        <div class="compact-pillar">
+                            <h4><span lang="ko">리스크 컷 (Risk)</span><span lang="en">Risk Cut</span></h4>
+                            <p><span lang="ko">가지가 부러질 것 같으면 즉시 탈출.</span><span lang="en">Immediate escape if the branch
+                                    looks weak.</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="strategies" class="philosophy">
+            <div class="container">
+                <div class="section-badge"><span lang="ko">강력한 전략 3선</span><span lang="en">3 Core Strategies</span>
+                </div>
+                <h2><span lang="ko">단순하지만 <span class="highlight">강한 뼈대</span></span><span lang="en">Simple but <span
+                            class="highlight">Strong Skeletion</span></span></h2>
+                <div class="section-visual-centered">
+                    <img src="../assets/images/ukkie_strategies.png" alt="Strategies" class="section-img-md">
+                </div>
+                <div class="philosophy-grid">
+                    <div class="philosophy-item">
+                        <div class="phil-num">01</div>
+                        <h3><span lang="ko">모멘텀 (Trend)</span><span lang="en">Momentum</span></h3>
+                        <p><span lang="ko">"무리(추세) 따라가면 산다. 근데 숲이 가만히면 계속 헛손질한다."</span><span lang="en">"Follow the herd
+                                to live. But if the forest is still, you keep swinging empty hands."</span></p>
+                    </div>
+                    <div class="philosophy-item">
+                        <div class="phil-num">02</div>
+                        <h3><span lang="ko">평균회귀 (Reversion)</span><span lang="en">Mean Reversion</span></h3>
+                        <p><span lang="ko">"가지 휘면 원래 돌아오는데, 부러지는 순간이면 같이 떨어진다."</span><span lang="en">"Bent branches
+                                snap back, but if they break, you fall together."</span></p>
+                    </div>
+                    <div class="philosophy-item">
+                        <div class="phil-num">03</div>
+                        <h3><span lang="ko">캐리/베이시스</span><span lang="en">Carry/Basis</span></h3>
+                        <p><span lang="ko">"매일 바나나 조금씩 주는 나무도, 어느 날 독나무로 바뀐다."</span><span lang="en">"A tree that gives
+                                tiny bananas daily can become a poison tree one day."</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pitfalls" class="gates">
+            <div class="container">
+                <h2><span lang="ko">오랑우탄이 <span class="highlight">피하는 함정</span></span><span lang="en">Pitfalls <span
+                            class="highlight">to Avoid</span></span></h2>
+                <div class="table-wrapper">
+                    <table class="gates-table">
+                        <thead>
+                            <tr>
+                                <th><span lang="ko">함정</span><span lang="en">Pitfall</span></th>
+                                <th><span lang="ko">오랑우탄의 경고</span><span lang="en">Whale's Warning</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span lang="ko">백테스트 과최적화</span><span lang="en">Overfitting</span></td>
+                                <td><span lang="ko">"과거 바나나 위치만 외우면, 새로운 숲에서 굶는다."</span><span lang="en">"Memorizing
+                                        past banana locations leaves you hungry in a new forest."</span></td>
+                            </tr>
+                            <tr>
+                                <td><span lang="ko">거래비용 무시</span><span lang="en">Ignoring Costs</span></td>
+                                <td><span lang="ko">"바나나 땄는데 수수료로 다 뺏기면 남는 게 없다."</span><span lang="en">"If you pick a
+                                        banana but lose it all to fees, you have nothing."</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="roadmap">
+            <div class="container">
+                <div class="section-badge"><span lang="ko">지속 가능한 성장</span><span lang="en">Sustainable Growth</span>
+                </div>
+                <h2><span lang="ko">프로덕션을 향한 <span class="highlight">여정</span></span><span lang="en">The Path to <span
+                            class="highlight">Production</span></span></h2>
+                <div class="roadmap-timeline">
+                    <div class="roadmap-step">
+                        <div class="step-circle">1</div>
+                        <h3><span lang="ko">섀도우 모드</span><span lang="en">Shadow Mode</span></h3>
+                        <p><span lang="ko">실시간 시장 감시 및 신호 로깅. 리스크 제로.</span><span lang="en">Live monitoring and signal
+                                logging. Zero risk.</span></p>
+                    </div>
+                    <div class="roadmap-step">
+                        <div class="step-circle">2</div>
+                        <h3><span lang="ko">페이퍼 트레이딩</span><span lang="en">Paper Trading</span></h3>
+                        <p><span lang="ko">테스트넷 실전 체결. 슬리피지 검증.</span><span lang="en">Testnet execution. Validating
+                                slippage.</span></p>
+                    </div>
+                    <div class="roadmap-step active">
+                        <div class="step-circle">3</div>
+                        <h3><span lang="ko">라이브 알파</span><span lang="en">Live Alpha</span></h3>
+                        <p><span lang="ko">소액 실전 투입. 견고함 증명.</span><span lang="en">Small scale real trading. Proving
+                                robustness.</span></p>
+                    </div>
+                    <div class="roadmap-step">
+                        <div class="step-circle">4</div>
+                        <h3><span lang="ko">프로덕션</span><span lang="en">Production</span></h3>
+                        <p><span lang="ko">멀티 자산 포트폴리오 본격 운용.</span><span lang="en">Full scale asset management.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ukkie Trader Project. <span lang="ko">신중하고 투명한 오픈소스 거래 시스템.</span><span lang="en">Prudent &
+                    Transparent Open Source Trading.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        function setLang(lang) {
+            document.body.className = lang;
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
+            });
+            localStorage.setItem('ukkie-lang', lang);
+        }
+
+        // Initialize language
+        const savedLang = localStorage.getItem('ukkie-lang') || 'ko';
+        setLang(savedLang);
+    </script>
+</body>
+
+</html>

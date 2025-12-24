@@ -1,8 +1,19 @@
 # 🦧 Ukkie Trader: Trade Like a Prudent Orangutan
 
+<div align="center">
+
+[![Language](https://img.shields.io/badge/Language-English-blue?style=for-the-badge)](README.md)
+[![Language](https://img.shields.io/badge/Language-Korean-red?style=for-the-badge)](README-kr.md)
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+</div>
+
 > **"Moves only when the banana is ripe. Specs frozen before action. Survival is the only edge."**
 
-![Ukkie Banner](assets/images/ukkie_hero.png)
+![Ukkie Banner](landing/assets/images/ukkie_hero.png)
 
 **Ukkie Trader** is not just a bot; it's a philosophy wrapped in Python. It enforces a strict, 10-agent validation pipeline to ensure that every trading strategy is robust, regime-aware, and mathematically sound *before* it ever risks a single cent.
 
@@ -13,7 +24,7 @@
 Quant trading isn't about complex math; it's about disciplined rules. We translate the primal wisdom of the forest into rigorous algorithmic enforcement.
 
 ### 1. The 4 Pillars of Strategy
-![4 Pillars](assets/images/ukkie_pillars.png)
+![4 Pillars](landing/assets/images/ukkie_pillars.png)
 | Orangutan Logic (Udder Uqqi) | Quant Algo Translation |
 |-------------------|------------------------|
 | **"Smell banana, hold. No smell, drop."** | **Signal & Exit**: Define precise Entry (Signal > Threshold) and Exit (Signal Decay) conditions. |
@@ -23,7 +34,7 @@ Quant trading isn't about complex math; it's about disciplined rules. We transla
 | **"When stop?"** | **Risk Cut**: Hard Stop Loss and Max Drawdown limit. |
 
 ### 2. The Golden Checklist (Good Strategy)
-![Survival First](assets/images/ukkie_survival.png)
+![Survival First](landing/assets/images/ukkie_survival.png)
 | Condition | The Orangutan Test 🍌 | The Quant Metric 📊 |
 |-----------|------------------------|---------------------|
 | **Edge** | *"Eat banana but still hungry? Fake banana."* | **Net Expectancy > 0** (After Fees/Slippage/Impact). |
@@ -31,7 +42,7 @@ Quant trading isn't about complex math; it's about disciplined rules. We transla
 | **Execution** | *"See banana but arm too short? Starve."* | **Fill Rate & Latency**. Strategy must be executable in real liquidity conditions. |
 
 ### 3. Simple Strategy Flavors
-![Strategy Flavors](assets/images/ukkie_strategies.png)
+![Strategy Flavors](landing/assets/images/ukkie_strategies.png)
 | Flavor | Primal Wisdom | Pros & Cons |
 |--------|---------------|-------------|
 | **Momentum** | 🚀 *"Follow the herd running to fruit."* | **Pro**: Big wins in trends. <br> **Con**: Whipsaws in flat markets (The "Forest is quiet" trap). |
@@ -111,6 +122,29 @@ ukkie propose "MyFirstTrend" "trend_following_v1.py"
 ```bash
 ukkie validate STRAT-12345
 ```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from fellow Orangutans! Whether it's a new strategy, a bug fix, or a documentation improvement, your help is appreciated.
+
+1. **Fork** the repository.
+2. **Create** a feature branch (`git checkout -b feature/AmazingStrategy`).
+3. **Commit** your changes (`git commit -m 'Add AmazingStrategy'`).
+4. **Push** to the branch (`git push origin feature/AmazingStrategy`).
+5. **Open** a Pull Request.
+
+### Development Setup
+```bash
+git clone https://github.com/yourname/ukkie-trader.git
+cd ukkie-trader
+pip install -e ".[dev]"
+```
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 

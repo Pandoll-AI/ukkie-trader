@@ -1,8 +1,19 @@
 # 🦧 Ukkie Trader: 신중한 오랑우탄처럼 거래하라
 
+<div align="center">
+
+[![Language](https://img.shields.io/badge/Language-English-blue?style=for-the-badge)](README.md)
+[![Language](https://img.shields.io/badge/Language-Korean-red?style=for-the-badge)](README-kr.md)
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+</div>
+
 > **"바나나가 익었을 때만 움직인다. 행동하기 전에 계획을 얼린다. 살아남는 것이 유일한 엣지다."**
 
-![Ukkie Banner](assets/images/ukkie_hero.png)
+![Ukkie Banner](landing/assets/images/ukkie_hero.png)
 
 **Ukkie Trader**는 단순한 봇이 아닙니다. 파이썬으로 감싼 하나의 "철학"입니다. 10개의 엄격한 에이전트 검증 파이프라인을 통해 모든 매매 전략이 1원이라도 걸기 전에 견고하고, 시장 상황을 인지하며, 수학적으로 건전한지 확인합니다.
 
@@ -13,7 +24,7 @@
 퀀트 트레이딩의 핵심은 어려운 수학이 아니라 **규칙**입니다. 우리는 숲속의 원초적인 지혜를 엄격한 알고리즘으로 번역합니다.
 
 ### 1. 전략의 4가지 기둥
-![4 Pillars](assets/images/ukkie_pillars.png)
+![4 Pillars](landing/assets/images/ukkie_pillars.png)
 | 오랑우탄 논리 (우끼우끼) | 퀀트 알고리즘 번역 |
 |-------------------|------------------------|
 | **"바나나 냄새 나면 들고 간다. 냄새 없으면 던진다."** | **Signal & Exit**: 정확한 진입(Signal > Threshold) 및 청산(Signal Decay) 조건 정의. |
@@ -23,7 +34,7 @@
 | **"언제 멈춰?"** | **리스크 컷**: 하드 스탑로스(Stop Loss) 및 최대 낙폭(MDD) 제한. |
 
 ### 2. 황금 체크리스트 (좋은 전략 조건)
-![Survival First](assets/images/ukkie_survival.png)
+![Survival First](landing/assets/images/ukkie_survival.png)
 | 조건 | 오랑우탄 테스트 🍌 | 퀀트 지표 📊 |
 |-----------|------------------------|---------------------|
 | **엣지 (Edge)** | *"먹었는데 배 안 차면 가짜다."* | **순 기대값(Net Expectancy) > 0** (수수료/슬리피지/임팩트 제외 후). |
@@ -31,7 +42,7 @@
 | **실행 (Execution)** | *"나무 위에서 바나나 봤는데 손이 안 닿으면 굶는다."* | **체결률 & 레이턴시**. 실제 유동성 환경에서 실행 가능한 전략이어야 함. |
 
 ### 3. 오랑우탄이 좋아하는 단순 강한 뼈대 3개
-![Strategy Flavors](assets/images/ukkie_strategies.png)
+![Strategy Flavors](landing/assets/images/ukkie_strategies.png)
 | 맛 (Flavor) | 원초적 지혜 | 장점 & 단점 |
 |--------|---------------|-------------|
 | **모멘텀 (Momentum)** | 🚀 *"무리(추세) 따라가면 산다."* | **장점**: 추세장에서 큰 수익. <br> **단점**: 숲이 고요하면(횡보장) 계속 헛손질(Whipsaw). |
@@ -60,7 +71,7 @@
 우리는 전략을 그냥 "돌리지" 않습니다. 혹독하게 검증합니다.
 
 ```mermaid
-graph LR
+graph TB
     A[연구 단계] --> B[검증 단계]
     B --> C[결정 단계]
     
@@ -79,8 +90,8 @@ graph LR
     
     subgraph Phase C
     PC --> O{지휘자 Orchestrator}
-    O -->|통과| 승인 (APPROVE)
-    O -->|실패| 거절 (REJECT)
+    O -->|통과| 승인
+    O -->|실패| 거절
     end
 ```
 
@@ -111,6 +122,29 @@ ukkie propose "MyFirstTrend" "trend_following_v1.py"
 ```bash
 ukkie validate STRAT-12345
 ```
+
+---
+
+## 🤝 기여하기 (Contributing)
+
+동료 오랑우탄들의 기여를 환영합니다! 새로운 전략, 버그 수정, 문서 개선 등 어떤 도움이든 감사합니다.
+
+1. 저장소를 **포크(Fork)**합니다.
+2. 기능 브랜치를 **생성**합니다 (`git checkout -b feature/AmazingStrategy`).
+3. 변경 사항을 **커밋**합니다 (`git commit -m 'Add AmazingStrategy'`).
+4. 브랜치에 **푸시**합니다 (`git push origin feature/AmazingStrategy`).
+5. **풀 리퀘스트(Pull Request)**를 엽니다.
+
+### 개발 환경 설정
+```bash
+git clone https://github.com/yourname/ukkie-trader.git
+cd ukkie-trader
+pip install -e ".[dev]"
+```
+
+## 📄 라이선스 (License)
+
+MIT 라이선스 하에 배포됩니다. 자세한 내용은 `LICENSE` 파일을 참조하세요.
 
 ---
 

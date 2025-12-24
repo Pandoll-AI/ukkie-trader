@@ -80,6 +80,9 @@ nav {
 }
 
 .btn-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.6rem 1.2rem;
     border-radius: 99px;
     font-size: 0.9rem;
@@ -130,7 +133,7 @@ nav {
 }
 
 [lang="ko"] {
-    display: block;
+    display: inline;
 }
 
 /* EN active state */
@@ -175,25 +178,6 @@ body.en [lang="ko"] {
     margin-right: 0;
 }
 
-
-
-transform: translateY(-2px);
-box-shadow: 0 4px 20px var(--accent-glow);
-}
-
-.btn-github {
-    background: #24292e;
-    color: #ffffff;
-    padding: 0.75rem 1.75rem;
-    border-radius: 99px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    /* margin-right removed for equal spacing via gap */
-}
 
 /* Mysterious Zen Button */
 @keyframes mystery-pulse {

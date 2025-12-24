@@ -50,14 +50,22 @@
                         complex math.</span>
                 </p>
                 <div class="cta-group">
-                    <a href="#" class="btn-primary btn-lg">
+                    <a href="docs.html" class="btn-primary btn-lg">
                         <span lang="ko">CLI 시작하기</span>
                         <span lang="en">Get Started with CLI</span>
                     </a>
-                    <a href="#" class="btn-secondary btn-lg">
-                        <span lang="ko">우끼의 투자원칙</span>
-                        <span lang="en">Ukkie's Principles</span>
+                    <a href="https://github.com/Pandoll-AI/ukkie-trader" class="btn-github btn-lg" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg class="btn-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>
+                        <span>GitHub</span>
                     </a>
+                    <button class="btn-zen btn-lg" onclick="toggleZenMode()">
+                        <span lang="ko">우끼의 투자원칙 (Zen)</span>
+                        <span lang="en">Ukkie's Principles (Zen)</span>
+                    </button>
                 </div>
                 <div class="terminal-preview">
                     <div class="terminal-header">
@@ -286,6 +294,111 @@
         </section>
     </main>
 
+    <!-- Zen Mode Overlay -->
+    <div id="zenOverlay" class="zen-overlay">
+        <button class="zen-close" onclick="toggleZenMode()">&times;</button>
+        <div class="zen-frame">
+            <div class="zen-stage">
+                <!-- English Content -->
+                <div id="zen-content-en" class="zen-crawl" style="display: none;">
+                    <h1>Ukkie's Principles</h1>
+
+                    <h2>1. The Goal</h2>
+                    <p>Quant is not about math. It's about rules. Oook-oook.</p>
+                    <div class="quote">
+                        "Smell banana, hold. No smell, drop. Oook-oook."
+                    </div>
+                    <p><strong>When Enter?</strong> (Entry)<br><strong>When Leave?</strong> (Exit)<br><strong>How
+                            Much?</strong> (Sizing)<br><strong>When Stop?</strong> (Risk Cut)</p>
+
+                    <h2>2. The Checklist</h2>
+                    <p><strong>A. Edge is a Real Banana</strong></p>
+                    <p>Yellow stone is not banana. Must fill belly after fees.</p>
+                    <div class="quote">"Eat banana but still hungry? Fake banana."</div>
+
+                    <p><strong>B. Survival First</strong></p>
+                    <p>Don't look at profit first. Look at the cliff.</p>
+                    <div class="quote">"Dead monkey eats no fruit. Survive to eat another day."</div>
+
+                    <p><strong>C. Reach to Eat</strong></p>
+                    <p>Great signal, no fill? Pure imagination.</p>
+                    <div class="quote">"Banana on high branch, arm too short? Starve."</div>
+
+                    <h2>3. Strong Frameworks</h2>
+                    <p><strong>Momentum:</strong> Follow the herd. <br><em>"Forest quiet? Don't swing."</em></p>
+                    <p><strong>Mean Reversion:</strong> Branch snaps back. <br><em>"Branch breaks? We fall."</em></p>
+                    <p><strong>Carry:</strong> Drip by drip. <br><em>"Safe tree can turn poisonous."</em></p>
+
+                    <h2>4. Simple Strategy</h2>
+                    <p><strong>Signal:</strong> Price > 24h High (Trend) + Volatility High.<br>
+                        <strong>Action:</strong> Long on Breakout.<br>
+                        <strong>Exit:</strong> Trend reversals or Volatility death.<br>
+                        <strong>Sizing:</strong> Quiet = Big, Loud = Small.
+                    </p>
+                    <div class="quote">
+                        "Move when it moves. Shrink when loud. Get down if weird."
+                    </div>
+
+                    <h2>5. Pitfalls</h2>
+                    <p>Overfitting: Memorizing past bananas.<br>
+                        Ignoring Costs: Losing fruit to fees.</p>
+
+                    <div style="height: 50vh;"></div>
+                </div>
+
+                <!-- Korean Content -->
+                <div id="zen-content-ko" class="zen-crawl" style="display: none;">
+                    <h1>우끼의 투자원칙</h1>
+
+                    <h2>1. 목표 (The Goal)</h2>
+                    <p>퀀트는 수학이 아니라 규칙입니다.</p>
+                    <div class="quote">
+                        "바나나 냄새 나면 들고 간다. 냄새 없으면 던진다. 우끼우끼."
+                    </div>
+                    <p><strong>언제 진입?</strong> (Entry)<br><strong>언제 청산?</strong> (Exit)<br><strong>얼마나?</strong>
+                        (Sizing)<br><strong>언제 멈춰?</strong> (Risk Cut)</p>
+
+                    <h2>2. 오랑우탄 체크리스트</h2>
+                    <p><strong>A. 엣지는 '진짜 바나나'여야 한다</strong></p>
+                    <p>겉만 노란 돌멩이는 바나나가 아니다. 수수료 떼고 배가 불러야 진짜다.</p>
+                    <div class="quote">"먹었는데 배 안 차면 가짜다."</div>
+
+                    <p><strong>B. 생존이 먼저다</strong></p>
+                    <p>수익률보다 절벽(MDD)을 먼저 봐라.</p>
+                    <div class="quote">"죽은 원숭이는 과일을 못 먹는다. 살아남아야 다음이 있다."</div>
+
+                    <p><strong>C. 손이 닿아야 먹는다 (Execution)</strong></p>
+                    <p>신호가 좋아도 체결 안 되면 상상일 뿐.</p>
+                    <div class="quote">"나무 꼭대기 바나나, 손 안 닿으면 굶는다."</div>
+
+                    <h2>3. 오랑우탄의 뼈대</h2>
+                    <p><strong>모멘텀:</strong> 숲이 조용하면 휘두르지 마라.<br><em>"무리 따라가면 산다."</em></p>
+                    <p><strong>평균회귀:</strong> 가지가 부러지면 같이 떨어진다.<br><em>"휘면 돌아오는데 부러지면 끝이다."</em></p>
+                    <p><strong>캐리/베이시스:</strong> 안전한 나무도 독나무로 변한다.<br><em>"조금씩 주는 나무 경계하라."</em></p>
+
+                    <h2>4. 단순한 전략 예시</h2>
+                    <p><strong>신호:</strong> 가격 > 24시간 고가 (추세) + 변동성 상위.<br>
+                        <strong>행동:</strong> 돌파 시 롱.<br>
+                        <strong>청산:</strong> 반대 신호 혹은 변동성 죽음.<br>
+                        <strong>사이징:</strong> 조용하면 크게, 시끄러우면 작게.
+                    </p>
+                    <div class="quote">
+                        "움직일 때만 타고, 시끄러우면 작게 타고, 이상하면 내려온다."
+                    </div>
+
+                    <h2>5. 함정 (Pitfalls)</h2>
+                    <p><strong>과최적화:</strong> 과거 바나나 위치만 외우기.<br>
+                        <strong>비용 무시:</strong> 수수료로 바나나 다 뺏기기.
+                    </p>
+
+                    <div style="height: 50vh;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <footer>
         <div class="container">
             <p>&copy; 2025 Ukkie Trader Project. <span lang="ko">신중하고 투명한 오픈소스 거래 시스템.</span><span lang="en">Prudent &
@@ -294,6 +407,28 @@
     </footer>
 
     <script>
+        function toggleZenMode() {
+            const overlay = document.getElementById('zenOverlay');
+            const lang = localStorage.getItem('ukkie-lang') || 'ko';
+
+            // Toggle visibility
+            overlay.classList.toggle('active');
+
+            if (overlay.classList.contains('active')) {
+                // Show correct language content
+                document.querySelectorAll('.zen-crawl').forEach(el => el.style.display = 'none');
+                const content = document.getElementById(`zen-content-${lang}`);
+                if (content) {
+                    content.style.display = 'block';
+
+                    // Reset animation
+                    content.style.animation = 'none';
+                    content.offsetHeight; /* trigger reflow */
+                    content.style.animation = 'zen-crawl 100s linear infinite';
+                }
+            }
+        }
+
         function setLang(lang) {
             document.body.className = lang;
             document.querySelectorAll('.lang-btn').forEach(btn => {

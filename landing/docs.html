@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukkie CLI Manual | Documentation</title>
+    <link rel="stylesheet" href="docs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="lang-switch">
+        <button class="lang-btn active" data-lang="ko" onclick="setLanguage('ko')">KO</button>
+        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+    </div>
+
+    <header class="mobile-header">
+        <a href="index.html" class="sidebar-logo">🍌 <span>Ukkie Docs</span></a>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <div class="docs-layout">
+        <aside class="sidebar" id="sidebar">
+            <a href="index.html" class="sidebar-logo">🍌 <span>Ukkie Docs</span></a>
+
+            <nav>
+                <div class="nav-section">
+                    <div class="nav-section-title" data-ko="시작하기" data-en="Getting Started">시작하기</div>
+                    <a href="#intro" class="nav-link active" data-ko="소개" data-en="Introduction">소개</a>
+                    <a href="#install" class="nav-link" data-ko="설치 방법" data-en="Installation">설치 방법</a>
+                    <a href="#quickstart" class="nav-link" data-ko="빠른 시작" data-en="Quick Start">빠른 시작</a>
+                </div>
+
+                <div class="nav-section">
+                    <div class="nav-section-title" data-ko="명령어 가이드" data-en="Command Guide">명령어 가이드</div>
+                    <a href="#cmd-zen" class="nav-link">ukkie zen</a>
+                    <a href="#cmd-propose" class="nav-link">ukkie propose</a>
+                    <a href="#cmd-validate" class="nav-link">ukkie validate</a>
+                    <a href="#cmd-list" class="nav-link">ukkie list</a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <!-- Introduction Section -->
+            <section id="intro" class="doc-section">
+                <div class="lang-content ko">
+                    <h1>🦧 Ukkie CLI 소개</h1>
+                    <p>Ukkie Trader CLI는 신중한 오랑우탄의 철학을 터미널로 옮겨온 도구입니다. 복잡한 수식보다는 명확한 규칙을, 수익보다는 생존을 우선시하는 당신을 위한 강력한 커맨드
+                        라인 인터페이스입니다.</p>
+                </div>
+                <div class="lang-content en" style="display: none;">
+                    <h1>🦧 Ukkie CLI Introduction</h1>
+                    <p>Ukkie Trader CLI is a tool that brings the philosophy of a prudent orangutan to your terminal.
+                        It's a powerful command-line interface for those who prioritize clear rules over complex
+                        formulas and survival over profit.</p>
+                </div>
+            </section>
+
+            <!-- Installation Section -->
+            <section id="install" class="doc-section">
+                <div class="lang-content ko">
+                    <h2>📥 설치 방법</h2>
+                    <p>Python 3.10 이상의 환경에서 다음 명령어를 통해 설치할 수 있습니다.</p>
+                    <pre><code class="shell-prompt">git clone https://github.com/sjlee/ukkie-trader.git
+cd ukkie-trader
+pip install -e .</code></pre>
+                    <p>설치가 완료되면 터미널에서 <code>ukkie</code> 명령어를 사용할 수 있습니다.</p>
+                </div>
+                <div class="lang-content en" style="display: none;">
+                    <h2>📥 Installation</h2>
+                    <p>You can install it in a Python 3.10+ environment using the following commands.</p>
+                    <pre><code class="shell-prompt">git clone https://github.com/sjlee/ukkie-trader.git
+cd ukkie-trader
+pip install -e .</code></pre>
+                    <p>Once installed, you can use the <code>ukkie</code> command in your terminal.</p>
+                </div>
+            </section>
+
+            <!-- Quick Start -->
+            <section id="quickstart" class="doc-section">
+                <div class="lang-content ko">
+                    <h2>🚀 빠른 시작</h2>
+                    <p>먼저 우끼의 철학을 확인해보세요.</p>
+                    <pre><code class="shell-prompt">ukkie zen</code></pre>
+                    <p>이제 당신만의 전략을 제안하고 검증의 숲을 통과시켜보세요.</p>
+                </div>
+                <div class="lang-content en" style="display: none;">
+                    <h2>🚀 Quick Start</h2>
+                    <p>First, check out Ukkie's philosophy.</p>
+                    <pre><code class="shell-prompt">ukkie zen</code></pre>
+                    <p>Now, propose your own strategy and pass it through the validation gauntlet.</p>
+                </div>
+            </section>
+
+            <!-- Command Reference -->
+            <section id="cmd-zen" class="doc-section">
+                <div class="lang-content ko">
+                    <h2><code>ukkie zen</code></h2>
+                    <p>우끼의 트레이딩 원칙과 철학을 출력합니다. 마음이 흔들릴 때마다 읽어보세요.</p>
+                </div>
+                <div class="lang-content en" style="display: none;">
+                    <h2><code>ukkie zen</code></h2>
+                    <p>Outputs Ukkie's trading principles and philosophy. Read it whenever you feel wavered.</p>
+                </div>
+            </section>
+
+            <section id="cmd-propose" class="doc-section">
+                <div class="lang-content ko">
+                    <h2><code>ukkie propose</code></h2>
+                    <p>새로운 전략 아이디어를 시스템에 등록합니다. 아이디어는 동결(Freeze)되어 이후 검증 과정에서 변조되지 않습니다.</p>
+                    <pre><code class="shell-prompt">ukkie propose "Breakout" "strat_v0.1.0.py"</code></pre>
+                </div>
+                <div class="lang-content en" style="display: none;">
+                    <h2><code>ukkie propose</code></h2>
+                    <p>Registers a new strategy idea into the system. The idea is frozen to prevent tampering during the
+                        validation process.</p>
+                    <pre><code class="shell-prompt">ukkie propose "Breakout" "strat_v0.1.0.py"</code></pre>
+                </div>
+            </section>
+
+            <section id="cmd-validate" class="doc-section">
+                <div class="lang-content ko">
+                    <h2><code>ukkie validate</code></h2>
+                    <p>등록된 전략을 10단계 에이전트 파이프라인(Data QA, Backtest, Risk Stress 등)으로 검증합니다.</p>
+                    <pre><code class="shell-prompt">ukkie validate STRAT-ID</code></pre>
+                </div>
+                <div class="lang-content en" style="display: none;">
+                    <h2><code>ukkie validate</code></h2>
+                    <p>Validates the registered strategy through a 10-agent pipeline (Data QA, Backtest, Risk Stress,
+                        etc.).</p>
+                    <pre><code class="shell-prompt">ukkie validate STRAT-ID</code></pre>
+                </div>
+            </section>
+
+            <section id="cmd-list" class="doc-section">
+                <div class="lang-content ko">
+                    <h2><code>ukkie list</code></h2>
+                    <p>현재까지 등록된 전략들의 상태와 검증 결과를 한눈에 확인합니다.</p>
+                </div>
+                <div class="lang-content en" style="display: none;">
+                    <h2><code>ukkie list</code></h2>
+                    <p>View the status and validation results of all registered strategies at a glance.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function setLanguage(lang) {
+            // Update UI buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            // Toggle content
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.style.display = el.classList.contains(lang) ? 'block' : 'none';
+            });
+
+            // Update sidebar text
+            document.querySelectorAll('[data-ko]').forEach(el => {
+                el.textContent = el.getAttribute('data-' + lang);
+            });
+
+            // Save preference
+            localStorage.setItem('ukkie-docs-lang', lang);
+        }
+
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('open');
+        }
+
+        // Initialize
+        const savedLang = localStorage.getItem('ukkie-docs-lang') || 'ko';
+        setLanguage(savedLang);
+
+        // Sidebar active link handling
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.doc-section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

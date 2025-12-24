@@ -11,6 +11,8 @@
 
 </div>
 
+**Ukkie Trader** 프로젝트는 공식 랜딩 페이지인 [ukkie-trader.vercel.app](https://ukkie-trader.vercel.app)와 연계되어 있습니다. 우끼의 철학을 시각적으로 확인해 보세요!
+
 > **"바나나가 익었을 때만 움직인다. 행동하기 전에 계획을 얼린다. 살아남는 것이 유일한 엣지다."**
 
 ![Ukkie Banner](landing/assets/images/ukkie_hero.png)
@@ -64,6 +66,10 @@
 
 > **한 줄 요약**: "움직일 때만 타고, 시끄러우면 작게 타고, 이상하면 나무에서 내려온다. 우끼우끼."
 
+> **한 줄 요약**: "움직일 때만 타고, 시끄러우면 작게 타고, 이상하면 나무에서 내려온다. 우끼우끼."
+
+자세한 내용은 [우끼의 투자원칙 (Zen)](ZEN.txt) 파일을 참고하세요.
+
 ---
 
 ## 🛡️ 10-에이전트 파이프라인의 보호
@@ -115,7 +121,7 @@ pip install -e .
 
 ### 2. 전략 제안하기
 ```bash
-ukkie propose "MyFirstTrend" "trend_following_v1.py"
+ukkie propose "MyFirstTrend" "trend_following_v0.1.0.py"
 ```
 
 ### 3. 검증의 숲 통과하기

@@ -1,7 +1,7 @@
 import pandas as pd
 from datetime import datetime
-from typing import Tuple, List, Dict, Any
-from pydantic import BaseModel, ConfigDict
+from typing import List, Tuple
+from ukkie_trader import __version__
 from ukkie_trader.agents.base import BaseAgent
 from ukkie_trader.domain.strategy.definition import FrozenStrategy, BacktestResult, SummaryMetrics
 from ukkie_trader.engine.backtest.engine import BacktestEngine
@@ -19,7 +19,7 @@ class BacktestAgent(BaseAgent[BacktestInput, BacktestResult]):
 
     @property
     def version(self) -> str:
-        return "1.0.0"
+        return __version__
 
     async def validate_input(self, input_data: BacktestInput) -> Tuple[bool, List[str]]:
         errors = []

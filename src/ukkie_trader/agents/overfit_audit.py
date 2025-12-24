@@ -2,6 +2,7 @@ from datetime import datetime
 from typing import Tuple, List, Dict, Any
 import numpy as np
 from pydantic import BaseModel
+from ukkie_trader import __version__
 from ukkie_trader.agents.base import BaseAgent
 from ukkie_trader.domain.strategy.definition import FrozenStrategy, BacktestResult
 from ukkie_trader.utils.overfit import OverfitAuditor
@@ -19,7 +20,7 @@ class OverfitAuditAgent(BaseAgent[OverfitAuditInput, Dict[str, Any]]):
 
     @property
     def version(self) -> str:
-        return "1.0.0"
+        return __version__
 
     async def validate_input(self, input_data: OverfitAuditInput) -> Tuple[bool, List[str]]:
         if not input_data.returns:

@@ -1,6 +1,8 @@
 from datetime import datetime
 from typing import Tuple, List, Dict, Any
+from typing import List, Tuple
 from pydantic import BaseModel
+from ukkie_trader import __version__
 from ukkie_trader.agents.base import BaseAgent
 from ukkie_trader.domain.strategy.definition import FrozenStrategy, BacktestResult
 from ukkie_trader.utils.cost import CostModel
@@ -17,7 +19,7 @@ class CostSlippageAgent(BaseAgent[CostSlippageInput, Dict[str, Any]]):
 
     @property
     def version(self) -> str:
-        return "1.0.0"
+        return __version__
 
     async def validate_input(self, input_data: CostSlippageInput) -> Tuple[bool, List[str]]:
         return True, []

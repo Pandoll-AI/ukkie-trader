@@ -1,5 +1,6 @@
 from datetime import datetime
-from typing import Tuple, List, Dict, Any
+from typing import List, Tuple
+from ukkie_trader import __version__
 from ukkie_trader.agents.base import BaseAgent
 from ukkie_trader.domain.strategy.definition import (
     StrategyProposal, FrozenStrategy, FrozenDefinition, 
@@ -15,7 +16,7 @@ class FreezerAgent(BaseAgent[StrategyProposal, FrozenStrategy]):
 
     @property
     def version(self) -> str:
-        return "1.0.0"
+        return __version__
 
     async def validate_input(self, input_data: StrategyProposal) -> Tuple[bool, List[str]]:
         # Basic validation that required logic is present in raw_idea or elsewhere

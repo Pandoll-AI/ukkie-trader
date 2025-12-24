@@ -1,8 +1,9 @@
 import typer
 from rich.console import Console
+from ukkie_trader import __version__
 from rich.panel import Panel
 from rich.text import Text
-from typing import Optional
+from typing import Optional, List
 from datetime import datetime
 import asyncio
 
@@ -30,7 +31,7 @@ def main(
     version: Optional[bool] = typer.Option(None, "--version", "-v", help="Show version"),
 ):
     if version:
-        console.print("Ukkie Trader v1.0.0")
+        console.print(f"Ukkie Trader v{__version__}")
         raise typer.Exit()
     
     if ctx.invoked_subcommand is None:
@@ -39,6 +40,74 @@ def main(
 
 # Instead of importing, we'll define a few commands here for the initial setup
 # and then move them to separate files as the project grows.
+
+@app.command()
+def zen():
+    """
+    🍌 Print the Zen of Ukkie Trader (Korean).
+    """
+    zen_text = """
+# 🍌 1) 퀀트 전략 = “바나나 냄새 나는 규칙” 찾기 (우끼우끼)
+
+[bold white]퀀트는 어려운 수학이 핵심이 아니라, 규칙이 핵심이다. 우끼우끼.[/bold white]
+
+## 오랑우탄이 보는 전략의 뼈대는 딱 4개:
+
+[green]• 언제 들어가? (진입)[/green]
+[green]• 언제 나가? (청산)[/green]
+[green]• 얼마나 들어가? (사이징)[/green]
+[green]• 언제 멈춰? (리스크 컷)[/green]
+
+[italic yellow]“바나나 냄새 나면 들고 간다. 냄새 없으면 던진다. 우끼우끼.”[/italic yellow]
+
+# 🍌 2) 좋은 전략 조건: 오랑우탄 체크리스트
+
+## A. 엣지는 “진짜 바나나”여야 한다
+[white]겉으로 노란 돌멩이 = 바나나 아님[/white]
+[white]수수료/슬리피지/임팩트 다 빼고도 남아야 엣지다[/white]
+[italic yellow]“먹었는데 배 안 차면 가짜다. 우끼우끼.”[/italic yellow]
+
+## B. 리스크는 “생존”이 먼저다
+[white]수익률 보기 전에 먼저 보는 것:[/white]
+[white]• MDD(한 번에 얼마나 깨지나)[/white]
+[white]• 연속 손실 구간(얼마나 오래 굶나)[/white]
+[white]• 꼬리 리스크(갑자기 절벽에서 떨어지나)[/white]
+[italic yellow]“한 방에 죽으면 나쁜 전략. 오래 살아남으면 좋은 전략. 우끼우끼.”[/italic yellow]
+
+## C. 실행이 쉬워야 한다 (손이 닿아야 먹는다)
+[white]신호가 좋아도 체결이 안 되면 그냥 상상이다.[/white]
+[italic yellow]“나무 위에서 바나나 봤는데 손이 안 닿으면 굶는다. 우끼우끼.”[/italic yellow]
+
+# 🍌 3) 오랑우탄이 좋아하는 단순 강한 뼈대 3개
+
+## 1) 모멘텀(추세추종)
+[white]오르면 더 오르고, 내리면 더 내리는 경향을 탄다[/white]
+[italic yellow]“무리(추세) 따라가면 산다. 근데 숲이 가만히면 계속 헛친다.”[/italic yellow]
+
+## 2) 평균회귀(Mean Reversion)
+[white]너무 벌어지면 다시 붙는 성질을 먹는다[/white]
+[italic yellow]“가지 휘면 원래 돌아오는데, 부러지는 순간이면 같이 떨어진다.”[/italic yellow]
+
+## 3) 캐리/펀딩/베이시스
+[white]구조적으로 돈이 새는 곳을 받아먹는 느낌[/white]
+[italic yellow]“매일 바나나 조금씩 주는 나무도, 어느 날 독나무로 바뀐다.”[/italic yellow]
+
+# 🍌 4) 오랑우탄식 초간단 전략 설계 예시
+
+[white]신호: 24시간 돌파(추세) + IV가 기준보다 높음[/white]
+[white]진입: 상방 돌파면 롱 / 하방 돌파면 숏[/white]
+[white]청산: 반대 돌파 + 변동성 죽으면 청산[/white]
+[white]사이징: 변동성 타겟팅(조용하면 크게, 시끄러우면 작게)[/white]
+
+[bold green]오랑우탄 한 줄 요약:[/bold green]
+[italic yellow]“움직일 때만 타고, 시끄러우면 작게 타고, 이상하면 나무에서 내려온다. 우끼우끼.”[/italic yellow]
+
+# 🍌 5) 오랑우탄이 빠지는 함정 5개
+[red]• 백테스트가 너무 좋음 → 과최적화 가능성 큼[/red]
+[red]• 거래비용을 장식으로 넣음 → 실전에서 사망[/red]
+    """
+    from rich.markdown import Markdown
+    console.print(Panel(Markdown(zen_text), title="🍌 Zen of Ukkie", border_style="purple"))
 
 @app.command()
 def propose(

@@ -11,6 +11,8 @@
 
 </div>
 
+**Ukkie Trader** is the core engine for our official landing page at [ukkie-trader.vercel.app](https://ukkie-trader.vercel.app). Check it out for a visual deep dive into the Ukkie philosophy!
+
 > **"Moves only when the banana is ripe. Specs frozen before action. Survival is the only edge."**
 
 ![Ukkie Banner](landing/assets/images/ukkie_hero.png)
@@ -104,6 +106,21 @@ graph LR
 
 ---
 
+---
+
+## 🧘 Zen of Ukkie
+
+The core philosophy of this project is available in the [Zen of Ukkie](ZEN.txt) (Korean).
+
+View the live **Zen Mode** on the web: [https://ukkie-trader.vercel.app](https://ukkie-trader.vercel.app)
+
+You can also read it directly in your terminal:
+```bash
+ukkie zen
+```
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. Installation
@@ -115,7 +132,7 @@ pip install -e .
 
 ### 2. Propose a Strategy
 ```bash
-ukkie propose "MyFirstTrend" "trend_following_v1.py"
+ukkie propose "MyFirstTrend" "trend_following_v0.1.0.py"
 ```
 
 ### 3. Run the Gauntlet

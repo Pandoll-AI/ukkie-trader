@@ -19,7 +19,7 @@ class BaseAgent(ABC, Generic[InputT, OutputT]):
     @property
     @abstractmethod
     def version(self) -> str:
-        """Agent version (e.g., '1.0.0')"""
+        """Agent version (e.g., '0.1.0')"""
         pass
 
     @abstractmethod

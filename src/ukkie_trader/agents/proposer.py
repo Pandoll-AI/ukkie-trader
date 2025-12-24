@@ -1,5 +1,6 @@
 from datetime import datetime
 from typing import Tuple, List, Dict, Any
+from ukkie_trader import __version__
 from ukkie_trader.agents.base import BaseAgent
 from ukkie_trader.domain.strategy.definition import StrategyProposal, Timeframe
 from pydantic import BaseModel
@@ -18,7 +19,7 @@ class ProposerAgent(BaseAgent[ProposerInput, StrategyProposal]):
 
     @property
     def version(self) -> str:
-        return "1.0.0"
+        return __version__
 
     async def validate_input(self, input_data: ProposerInput) -> Tuple[bool, List[str]]:
         errors = []

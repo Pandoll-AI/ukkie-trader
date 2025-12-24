@@ -1,6 +1,7 @@
 import pandas as pd
 from datetime import datetime
 from typing import Tuple, List, Dict, Any
+from ukkie_trader import __version__
 from pydantic import BaseModel, ConfigDict
 from ukkie_trader.agents.base import BaseAgent
 from ukkie_trader.domain.strategy.definition import FrozenStrategy, DataQAResult
@@ -18,7 +19,7 @@ class DataQAAgent(BaseAgent[DataQAInput, DataQAResult]):
 
     @property
     def version(self) -> str:
-        return "1.0.0"
+        return __version__
 
     async def validate_input(self, input_data: DataQAInput) -> Tuple[bool, List[str]]:
         errors = []

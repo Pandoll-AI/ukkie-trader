@@ -1,2 +1,6 @@
 .vercel
 concept/
+
+# Local AI agent state
+.claude/
+.codex/
